@@ -64,7 +64,7 @@
 			var x2 = prompt("Please enter x2", "2");
 			var y2 = prompt("Please enter y2", "3");	
 
-			var result = Math.sqrt(Math.pow(x1+x2,2)+Math.pow(y1+y2,2));
+			var result = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
 
 			alert("The distance between points A("+x1+","+y1+") and B("+x2+","+y2+") is "+result);
 		</script>
@@ -111,10 +111,42 @@
 	<xmp>	
 		<script>
 
+		var col = 6; 
+		var row = 5;
+		var text = ' #';
+		var result = rowAll = '';
+
+		while(row > 0){
+		 	rowAll += text;
+		 row--;
+		}
+
+		while(col>=0){
+		 	col%2 == 0 ? result = rowAll.substring(1) : result = rowAll;
+		 	console.log(result + '\n'); 
+		 col--;
+		}
+
 		</script>
 	</xmp>
 	<script>
 		console.group("---------- 4 ----------");	
+
+		var col = 6; 
+		var row = 5;
+		var text = ' #';
+		var result = rowAll = '';
+
+		while(row > 0){
+		 	rowAll += text;
+		 row--;
+		}
+
+		while(col >= 0){
+		 	col%2 == 0 ? result = rowAll.substring(1) : result = rowAll;
+		 	console.log(result + '\n'); 
+		 col--;
+		}
 
 		console.groupEnd();
 	</script>
