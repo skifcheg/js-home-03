@@ -29,10 +29,23 @@
 		h3:after{
 			content: "⇓";
 		}
+		button{
+			padding: 10px;
+			margin: 10px;
+		}
 	</style>
+
+	<script  type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	<button onclick = "taskOne()">task one start</button>
+	<button onclick = "taskTwo()">task two start</button>
+	<button onclick = "taskThree()">task three start</button>
+	<button onclick = "taskFour()">task four start</button>
+	<button onclick = "taskFive()">task five start</button>
 
+	<br><br>
+	
 	<h3>1.</h3>
 	<xmp>	
 		<script>
@@ -43,17 +56,6 @@
 			console.log(name +" has a "+ event +" today at " + time + " in "+ place);	
 		</script>
 	</xmp>
-	<script>
-		console.group("---------- 1 ----------");
-
-		var name = "Sasha"; 
-		var time = "19:00"; 
-		var place = "meeting room"; 
-		var event = prompt("Please enter event", "js lesson");	
-		console.log(name +" has a "+ event +" today at " + time + " in "+ place);
-
-		console.groupEnd();
-	</script>
 
 	<h3>2.</h3>
 	<xmp>	
@@ -69,22 +71,6 @@
 			alert("The distance between points A("+x1+","+y1+") and B("+x2+","+y2+") is "+result);
 		</script>
 	</xmp>
-	<script>
-		console.group("---------- 2 ----------");
-
-		var x1 = 4;	
-		var y1 = 5;
-
-		var x2 = prompt("Please enter X2", "2");
-		var y2 = prompt("Please enter Y2", "3");
-
-		var result = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
-
-		alert("The distance between points A("+x1+","+y1+") and B("+x2+","+y2+") is "+result);
-		console.log("The distance between points A("+x1+","+y1+") and B("+x2+","+y2+") is "+result);
-
-		console.groupEnd();
-	</script>
 
 	<h3>3.</h3>
 	<xmp>	
@@ -96,16 +82,6 @@
 			}		
 		</script>
 	</xmp>
-	<script>
-		console.group("---------- 3 ----------");
-
-		var text = "#";
-		var result = "";
-		for(var i = 1; i <= 10; i++){			
-			console.log(result += text);		
-		}
-		console.groupEnd();
-	</script>
 
 	<h3>4.</h3>
 	<xmp>	
@@ -129,57 +105,28 @@
 
 		</script>
 	</xmp>
-	<script>
-		console.group("---------- 4 ----------");	
-
-		var col = 7; 
-		var row = 5;
-		var text = '# ';
-		var result = rowAll = '';
-
-		while(row > 0){
-		 	rowAll += text;
-		 row--;
-		}
-
-		while(col > 0){
-		 	col%2 == 0 ? result = text.slice(-1) + rowAll.slice(0, row-1) : result = rowAll;
-		 	console.log(result + '\n'); 
-		 col--;
-		}
-
-		console.groupEnd();
-	</script>
 
 	<h3>5.</h3>
 	<xmp>	
 		<script>
-			var random = Math.random();
+			var num = parseInt(Math.random() * 100, 10);		
+			var ask; 
+			console.log("number is "+ num);
+			do{
+				ask = prompt('Вгадай номер :)', '0');
+				if(ask < num) { 
+					alert("Our number is lower, try again") 
+				}
+				else if (ask > num) {
+					alert("Our number is higher, try again");
+				}
+				else{	
+					ask == num ? alert("You are right, the number is "+ num) : alert("error");
+				}	
+			} while(ask != num);
+			console.log("You are right, the number is "+ num);
 		</script>
-	</xmp>
-	<script>
-		console.group("---------- 5 ----------");
-
-		var num = Math.random() * 100;
-		var ask = prompt('Вгадай номер :)', '0');
-		var answer = '';
-		var result = '';
-
-		switch (answer) {
-			case low:
-				alert("Our number is lower, try again");
-				break;
-			case high:
-				alert("Our number is higher, try again");
-				break;
-			case good:
-				alert("You are right, the number is "+num);
-				break;
-			default: alert("error");
-			break;
-		}
-
-		console.groupEnd();
-	</script>
+	</xmp>	
+	
 </body>
 </html>
