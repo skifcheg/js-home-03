@@ -16,37 +16,29 @@
 			max-width: 100%;
 			margin-bottom: 10px;
 		}
-		h3{
-			  margin: 22px 0;
-			  clear: both;
-			  text-align: center;
-			  padding: 5px;
-			  border: 2px solid #888;
-			  color: #aaa;
-			  font-size: 1.4em;
-			  font-weight: normal;
-		}
-		h3:after{
-			content: "⇓";
-		}
 		button{
-			padding: 10px;
-			margin: 10px;
+			margin: 22px 0;
+			clear: both;
+			text-align: center;
+			padding: 5px;
+			font-size: 1.4em;
+			font-weight: normal;
+			width: 100%;
+			color: black;
+			cursor: pointer;
+			clear: both;
+		}
+		button:after{
+			content: "⇓";
 		}
 	</style>
 
 	<script  type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-	<button onclick = "taskOne()">task one start</button>
-	<button onclick = "taskTwo()">task two start</button>
-	<button onclick = "taskThree()">task three start</button>
-	<button onclick = "taskFour()">task four start</button>
-	<button onclick = "taskFive()">task five start</button>
 
-	<br><br>
 	
-	<h3>1.</h3>
+	<button onclick = "taskOne()">task one start</button>
 	<xmp>	
 		<script>
 			var name = "Sasha"; 
@@ -57,7 +49,7 @@
 		</script>
 	</xmp>
 
-	<h3>2.</h3>
+	<button onclick = "taskTwo()">task two start</button>
 	<xmp>	
 		<script>
 			var x1 = 4;	
@@ -72,7 +64,7 @@
 		</script>
 	</xmp>
 
-	<h3>3.</h3>
+	<button onclick = "taskThree()">task three start</button>
 	<xmp>	
 		<script>
 			var text = "#";			
@@ -83,7 +75,7 @@
 		</script>
 	</xmp>
 
-	<h3>4.</h3>
+	<button onclick = "taskFour()">task four start</button>
 	<xmp>	
 		<script>
 
@@ -106,7 +98,7 @@
 		</script>
 	</xmp>
 
-	<h3>5.</h3>
+	<button onclick = "taskFive()">task five start</button>
 	<xmp>	
 		<script>
 			var num = parseInt(Math.random() * 100, 10);		
