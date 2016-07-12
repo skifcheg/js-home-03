@@ -69,10 +69,10 @@ function taskFive(){
 	do{
 		ask = prompt('Вгадай номер :)', '0');
 		if(ask < num) { 
-			alert("Our number is lower, try again") 
+			alert("Our number is higher, try again"); 
 		}
 		else if (ask > num) {
-			alert("Our number is higher, try again");
+			alert("Our number is lower, try again");
 		}
 		else{	
 			ask == num ? alert("You are right, the number is "+ num) : alert("error");
